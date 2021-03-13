@@ -6,7 +6,7 @@ class WhetherApi extends DioForNative {
 
   fetchWhetherDataFromApi(String name) async {
     return await this.get(
-      _url + 'lang=pl&q' + name ,
+      _url + 'lang=pl&q' + name,
       options: Options(headers: {
         'x-rapidapi-host': 'community-open-weather-map.p.rapidapi.com',
         'x-rapidapi-key': 'xxx',

@@ -10,11 +10,7 @@ class WhetherBloc extends Bloc<WhetherEvent, WhetherState> {
   @override
   Stream<WhetherState> mapEventToState(event) {
     if (event is WhetherFetchEvent) {
-      try {
-
-
-      } catch (e) {
-
-      }
+      try {} catch (e) {}
     }
-  }}
+  }
+}

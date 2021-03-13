@@ -7,11 +7,8 @@ class WhetherData {
 
   factory WhetherData.fromJson(dynamic json) {
     return WhetherData(
-      main: json['weather']['main'],
-      description: json['weather']['description'],
-      temperature: json['main']['temp'] + 273.15
-    );
+        main: json['weather']['main'],
+        description: json['weather']['description'],
+        temperature: json['main']['temp'] + 273.15);
   }
-
-
 }

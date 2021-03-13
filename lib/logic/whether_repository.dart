@@ -7,5 +7,4 @@ class WhetherRepository {
   WhetherData getWhetherByCityName(String cityName) {
     return WhetherData.fromJson(whetherApi.fetchWhetherDataFromApi(cityName));
   }
-
 }

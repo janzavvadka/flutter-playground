@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_counter/bloc/counter/counter_cubit.dart';
-import 'package:flutter_bloc_counter/screens/home_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_counter/screens/third_screen.dart';
+import 'package:flutter_bloc_counter/bloc/counter/counter_cubit.dart';
 
 class SecondScreen extends StatefulWidget {
   final String title;

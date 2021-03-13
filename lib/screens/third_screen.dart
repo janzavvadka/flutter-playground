@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_counter/bloc/counter/counter_cubit.dart';
-import 'package:flutter_bloc_counter/screens/home_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_counter/screens/second_screen.dart';
+import 'package:flutter_bloc_counter/bloc/counter/counter_cubit.dart';
 
 class ThirdScreen extends StatefulWidget {
   final String title;
@@ -35,13 +33,13 @@ class _ThirdScreenState extends State<ThirdScreen> {
               listener: (context, state) => {
                 state.isIncrement
                     ? Scaffold.of(context).showSnackBar(SnackBar(
-                  duration: Duration(milliseconds: 10),
-                  content: Text("incremented"),
-                ))
+                        duration: Duration(milliseconds: 10),
+                        content: Text("incremented"),
+                      ))
                     : Scaffold.of(context).showSnackBar(SnackBar(
-                  duration: Duration(milliseconds: 10),
-                  content: Text("decremented"),
-                ))
+                        duration: Duration(milliseconds: 10),
+                        content: Text("decremented"),
+                      ))
               },
               builder: (context, state) => Padding(
                 padding: const EdgeInsets.all(30.0),

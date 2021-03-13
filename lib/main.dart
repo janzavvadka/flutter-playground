@@ -23,32 +23,32 @@ class _MyAppState extends State<MyApp> {
       title: 'Flutter bloc counter',
       routes: {
         "/": (context) => BlocProvider.value(
-          value: _counterCubit,
-          child: BlocProvider.value(
+              value: _counterCubit,
+              child: BlocProvider.value(
                 value: _counterCubit,
                 child: HomeScreen(
                   title: 'FirstScreen',
                 ),
               ),
-        ),
+            ),
         "/second": (context) => BlocProvider.value(
-          value: _counterCubit,
-          child: BlocProvider.value(
+              value: _counterCubit,
+              child: BlocProvider.value(
                 value: _counterCubit,
                 child: SecondScreen(
                   title: 'SecondScreen',
                 ),
               ),
-        ),
+            ),
         "/third": (context) => BlocProvider.value(
-          value: _counterCubit,
-          child: BlocProvider.value(
+              value: _counterCubit,
+              child: BlocProvider.value(
                 value: _counterCubit,
                 child: ThirdScreen(
                   title: 'ThistdScreen',
                 ),
               ),
-        ),
+            ),
       },
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -74,9 +74,7 @@ class _MyAppState extends State<MyApp> {
         break;
       case "/third":
         return MaterialPageRoute(
-          builder: (_) => ThirdScreen(
-            title: 'ThistdScreen'
-          ),
+          builder: (_) => ThirdScreen(title: 'ThistdScreen'),
         );
         break;
     }
