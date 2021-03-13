@@ -28,7 +28,6 @@ class _MyAppState extends State<MyApp> {
                 value: _counterCubit,
                 child: HomeScreen(
                   title: 'FirstScreen',
-                  color: Colors.redAccent,
                 ),
               ),
         ),
@@ -38,7 +37,6 @@ class _MyAppState extends State<MyApp> {
                 value: _counterCubit,
                 child: SecondScreen(
                   title: 'SecondScreen',
-                  color: Colors.greenAccent,
                 ),
               ),
         ),
@@ -48,7 +46,6 @@ class _MyAppState extends State<MyApp> {
                 value: _counterCubit,
                 child: ThirdScreen(
                   title: 'ThistdScreen',
-                  color: Colors.yellowAccent,
                 ),
               ),
         ),
@@ -65,7 +62,6 @@ class _MyAppState extends State<MyApp> {
         return MaterialPageRoute(
           builder: (_) => HomeScreen(
             title: 'FirstScreen',
-            color: Colors.redAccent,
           ),
         );
         break;
@@ -73,15 +69,13 @@ class _MyAppState extends State<MyApp> {
         return MaterialPageRoute(
           builder: (_) => SecondScreen(
             title: 'SecondScreen',
-            color: Colors.greenAccent,
           ),
         );
         break;
       case "/third":
         return MaterialPageRoute(
           builder: (_) => ThirdScreen(
-            title: 'ThistdScreen',
-            color: Colors.yellowAccent,
+            title: 'ThistdScreen'
           ),
         );
         break;

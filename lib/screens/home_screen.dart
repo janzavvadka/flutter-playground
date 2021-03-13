@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_counter/bloc/counter/counter_cubit.dart';
-import 'package:flutter_bloc_counter/screens/second_screen.dart';
-import 'package:flutter_bloc_counter/screens/third_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   final String title;
-  final Color color;
 
-  HomeScreen({this.title, this.color});
+  HomeScreen({this.title});
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -19,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: widget.color,
+        backgroundColor: Colors.redAccent,
         title: Text(widget.title),
       ),
       body: Center(
@@ -42,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   heroTag: null,
                   onPressed: () => BlocProvider.of<CounterCubit>(context).increment(),
                   tooltip: "increment",
-                  backgroundColor: widget.color,
+                  backgroundColor: Colors.redAccent,
                   child: Icon(Icons.add)),
               Padding(
                 padding: const EdgeInsets.all(30.0),
@@ -55,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   heroTag: null,
                   onPressed: () => BlocProvider.of<CounterCubit>(context).decrement(),
                   tooltip: "decrement",
-                  backgroundColor: widget.color,
+                  backgroundColor: Colors.redAccent,
                   child: Icon(Icons.remove)),
             ],
           ),
@@ -69,13 +66,13 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             FloatingActionButton(
               heroTag: null,
-              backgroundColor: widget.color,
+              backgroundColor: Colors.redAccent,
               onPressed: () => Navigator.of(context).pushNamed("/third"),
               child: Icon(Icons.keyboard_arrow_left_outlined),
             ),
             FloatingActionButton(
               heroTag: null,
-              backgroundColor: widget.color,
+              backgroundColor: Colors.redAccent,
               onPressed: () => Navigator.of(context).pushNamed("/second"),
               child: Icon(Icons.keyboard_arrow_right_outlined),
             ),
